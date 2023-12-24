@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Career Path Prediction</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1,h2 {
+            text-align: center;
+        }
+        form {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        select {
+            width: 100%;
+            padding: 8px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+        }
+        input[type="submit"] {
+            width: 100%;
+            padding: 12px;
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        input[type="submit"]:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <h1>Career Path Predictor</h1>
+    {% if prediction %}
+        <h2>Career Option is: {{ prediction }}</h2>
+    {% endif %}
+    <h2>Enter Your Preferences</h2>
+    <form action="/predict" method="post">
+        <label for="database">Database Fundamentals:</label>
+        <select id="database" name="database">
+            <option value="Not Interested">Not Interested</option>
+            <option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+
+        <label for="computer_architecture">Computer Architecture:</label>
+        <select id="computer_architecture" name="computer_architecture">
+            <option value="Not Interested">Not Interested</option>
+            <option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+
+        <label for="distributed_computing">Distributed Computing Systems:</label>
+        <select id="distributed_computing" name="distributed_computing">
+            <option value="Not Interested">Not Interested</option>
+            <option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+
+		
+		<label for="cyber_security">Cyber Security:</label>
+        <select id="cyber_security" name="cyber_security">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		<label for="networking">Networking:</label>
+        <select id="networking" name="networking">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+
+		<label for="software_development">Software Development:</label>
+        <select id="software_development" name="software_development">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		<label for="programming_skills">Programming Skills:</label>
+        <select id="programming_skills" name="programming_skills">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		<label for="project_management">Project Management:</label>
+        <select id="project_management" name="project_management">
+		
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		<label for="computer_forensics">Computer Forensics Fundamentals:</label>
+        <select id="computer_forensics" name="computer_forensics">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		<label for="technical_communication">Technical Communication:</label>
+        <select id="technical_communication" name="technical_communication">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		
+		<label for="ai_ml">AI ML:</label>
+        <select id="ai_ml" name="ai_ml">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		
+			<label for="software_engineering">Software Engineering:</label>
+        <select id="software_engineering" name="software_engineering">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+			<label for="business_analysis">Business Analysis:</label>
+        <select id="business_analysis" name="business_analysis">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		<label for="communication_skills">Communication skills:</label>
+        <select id="communication_skills" name="communication_skills">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+		
+		
+		<label for="data_science">Data Science:</label>
+        <select id="data_science" name="data_science">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+		
+
+			
+		<label for="troubleshooting_skills">Troubleshooting skills:</label>
+        <select id="troubleshooting_skills" name="troubleshooting_skills">
+            <option value="Not Interested">Not Interested</option>
+			<option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+    
+
+        <label for="graphics_designing">Graphics Designing:</label>
+        <select id="graphics_designing" name="graphics_designing">
+            <option value="Not Interested">Not Interested</option>
+            <option value="Poor">Poor</option>
+            <option value="Beginner">Beginner</option>
+            <option value="Average">Average</option>
+            <option value="Intermediate">Intermediate</option>
+            <option value="Excellent">Excellent</option>
+            <option value="Professional">Professional</option>
+        </select>
+
+        <input type="submit" value="Predict">
+    </form>
+</body>
+</html>
